@@ -1,4 +1,4 @@
-# Exito
+# Mobilevendor
 
 Company-specific data validation configurations.
 
