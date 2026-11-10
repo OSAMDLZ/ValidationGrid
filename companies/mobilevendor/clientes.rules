@@ -1,0 +1,235 @@
+{
+  "ruleSetName": "Clientes",
+  "fileExtension": "csv",
+  "delimiter": "|",
+  "hasHeader": false,
+  "fields": [
+    {
+      "name": "CodigoProveedor",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+$",
+      "description": "El código de proveedor es obligatorio y solo debe contener caracteres numéricos."
+    },
+    {
+      "name": "CodigoDistribuidor",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+$",
+      "description": "El código de distribuidor es obligatorio y solo debe contener caracteres numéricos."
+    },
+    {
+      "name": "CodigoCliente",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+$",
+      "description": "El código de cliente es obligatorio y solo debe contener caracteres numéricos."
+    },
+    {
+      "name": "NombreCliente",
+      "required": true,
+      "unique": false,
+      "regex": "^[A-ZÁÉÍÓÚÑÜ ]+$",
+      "description": "El nombre del cliente es obligatorio, debe estar en mayúsculas sostenidas y solo permite caracteres alfabéticos."
+    },
+    {
+      "name": "TipoDocumento",
+      "required": true,
+      "unique": false,
+      "regex": "^(RUC|CE|PAS)$",
+      "description": "El tipo de documento es obligatorio y solo permite los valores RUC, CE o PAS."
+    },
+    {
+      "name": "NumeroDocumento",
+      "required": true,
+      "unique": false,
+      "regex": "^[A-Za-z0-9]+$",
+      "description": "El número de documento es obligatorio y debe ser alfanumérico."
+    },
+    {
+      "name": "Direccion",
+      "required": true,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "La dirección es obligatoria, debe estar en mayúsculas sostenidas y permite caracteres alfanuméricos."
+    },
+    {
+      "name": "Mercado",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo opcional. No tiene restricción de formato."
+    },
+    {
+      "name": "Modulo",
+      "required": false,
+      "unique": false,
+      "regex": "^\\d+$",
+      "description": "Campo opcional. Si tiene valor, debe contener solo caracteres numéricos."
+    },
+    {
+      "name": "CanalCliente",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo opcional. No tiene restricción de formato."
+    },
+    {
+      "name": "TipoNegocio",
+      "required": true,
+      "unique": false,
+      "regex": "^(01|29|05|28|09|13|02|25)$",
+      "description": "El tipo de negocio es obligatorio y solo permite los valores: 01, 29, 05, 28, 09, 13, 02, 25."
+    },
+    {
+      "name": "SubTipoNegocio",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo opcional. No tiene restricción de formato."
+    },
+    {
+      "name": "Ubigeo",
+      "required": true,
+      "unique": false,
+      "regex": "^(0|\\d{5,6})$",
+      "description": "El ubigeo es obligatorio. Debe ser 0 o un número de 5 o 6 dígitos."
+    },
+    {
+      "name": "Distrito",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo opcional. Si tiene valor, debe estar en mayúsculas sostenidas y solo permite caracteres alfabéticos."
+    },
+    {
+      "name": "Estatus",
+      "required": true,
+      "unique": false,
+      "regex": "^(A|I)$",
+      "description": "El estatus es obligatorio y solo permite los valores A (Activo) o I (Inactivo)."
+    },
+    {
+      "name": "X",
+      "required": true,
+      "unique": false,
+      "regex": "^-?\\d+\\.\\d{2,}$",
+      "description": "Coordenada X obligatoria. Debe ser un número con punto decimal y al menos 2 decimales."
+    },
+    {
+      "name": "Y",
+      "required": true,
+      "unique": false,
+      "regex": "^-?\\d+\\.\\d{2,}$",
+      "description": "Coordenada Y obligatoria. Debe ser un número con punto decimal y al menos 2 decimales."
+    },
+    {
+      "name": "CodigoPadre",
+      "required": false,
+      "unique": false,
+      "regex": "^\\d+$",
+      "description": "Campo opcional. Si tiene valor, debe contener solo caracteres numéricos."
+    },
+    {
+      "name": "FechaIngreso",
+      "required": true,
+      "unique": false,
+      "regex": "^(19|20)\\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+      "description": "La fecha de ingreso es obligatoria. Formato esperado: YYYY-MM-DD."
+    },
+    {
+      "name": "FechaActualizacion",
+      "required": true,
+      "unique": false,
+      "regex": "^(19|20)\\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+      "description": "La fecha de actualización es obligatoria. Formato esperado: YYYY-MM-DD."
+    },
+    {
+      "name": "FechaProceso",
+      "required": true,
+      "unique": false,
+      "regex": "^(19|20)\\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]) ([01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d$",
+      "description": "La fecha de proceso es obligatoria. Formato esperado: YYYY-MM-DD HH:mm:ss."
+    },
+    {
+      "name": "Cluster",
+      "required": true,
+      "unique": false,
+      "regex": "^(01|02|03)$",
+      "description": "El cluster es obligatorio y solo permite los valores: 01, 02, 03."
+    },
+    {
+      "name": "REF2",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo opcional. No tiene restricción de formato."
+    },
+    {
+      "name": "REF3",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo opcional. No tiene restricción de formato."
+    },
+    {
+      "name": "REF4",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo opcional. No tiene restricción de formato."
+    },
+    {
+      "name": "REF5",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo opcional. No tiene restricción de formato."
+    },
+    {
+      "name": "REF6",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo opcional. No tiene restricción de formato."
+    },
+    {
+      "name": "REF7",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo opcional. No tiene restricción de formato."
+    },
+    {
+      "name": "REF8",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo opcional. No tiene restricción de formato."
+    },
+    {
+      "name": "REF9",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo opcional. No tiene restricción de formato."
+    },
+    {
+      "name": "REF10",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo opcional. No tiene restricción de formato."
+    }
+  ],
+  "crossFieldRules": [
+    {
+      "expression": "Modulo == '999' and CanalCliente == '1'",
+      "description": "Si el Módulo es 999, el CanalCliente debe ser obligatoriamente 1."
+    },
+      {
+      "expression": "(TipoNegocio == '01' or TipoNegocio == '03') and SubTipoNegocio == 'SUB NEGOCIO'",
+      "description": "Si el Tipo de Negocio es '01' o '03', el SubTipo de Negocio debe ser obligatoriamente 'SUB NEGOCIO'."
+    }
+  ]
+}
