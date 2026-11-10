@@ -1,4 +1,4 @@
-# Mobilevendor
+# Otro
 
 Company-specific data validation configurations.
 
